@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: painel_vendas_db
+    environment:
+      POSTGRES_USER: ana
+      POSTGRES_PASSWORD: painel1234
+      POSTGRES_DB: painel_vendas
+      
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
